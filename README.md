@@ -4,6 +4,16 @@
 ### 1. Django로 표현
 ### 2. 데이터 전처리
 #### 2-1. 고객정보의 결측치는 = 미응답으로 처리
+- df -> 고객정보 excel
+##### df['DOUBLE_IN'].fillna(3, inplace = True)  #맞벌이여부(DOUBLE_IN) 결측값 3으로 미응답처리
+##### df['MARRY_Y'].fillna(3, inplace = True) #결혼여부(DOUBLE_IN) 결측값 3으로 미응답처리
+###### df['NUMCHILD'].fillna(4, inplace = True) #자녀수 미응답 처리
+
+- df2 -> 전체정보(고객정보, 자산정보) excel
+###### df2['DOUBLE_IN'].fillna(3, inplace = True) #맞벌이여부(DOUBLE_IN) 결측값 3으로 미응답처리
+###### df2['MARRY_Y'].fillna(3, inplace = True) #결혼여부(DOUBLE_IN) 결측값 3으로 미응답처리
+###### df2['NUMCHILD'].fillna(4, inplace = True) #자녀수 미응답 처리
+###### df2['CHUNG_Y'].fillna(0, inplace = True) #청약 미응답 처리
 #### 2-2. 결측치있는 Column들의 상관계수 높은것 끼리 묶음
 RETIRE_NEED(은퇴 후 필요자금)
 - INCOM 0.45 (가구소득구간)
